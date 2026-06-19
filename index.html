@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="auth-container" class="auth-card">
+    <h2 id="auth-title">تسجيل الدخول</h2>
+    
+    <form id="auth-form">
+        <div class="input-group">
+        <label for="auth-email">البريد الإلكتروني</label>
+        <input type="email" id="auth-email" required placeholder="example@mail.com">
+        </div>
+        
+        <div class="input-group">
+        <label for="auth-password">كلمة المرور</label>
+        <input type="password" id="auth-password" required placeholder="******">
+        </div>
+        
+    <button type="submit" id="auth-submit-btn">دخول</button>
 
-    <div class="todo-container">
+    <div class="divider">أو</div>
+    <button type="button" id="google-btn" class="google-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg" alt="Google Logo" width="18">
+    الدخول بواسطة حساب Google
+    </button>
+</form>
+    
+    <p class="auth-toggle">
+        معندكش حساب؟ <span id="toggle-auth-mode">إنشاء حساب جديد</span>
+    </p>
+    </div>
+
+    <div id="todo-container" class="todo-container hidden">
         <h2>قائمة مهامي 🚀</h2>
         
         <div class="input-section">
