@@ -369,3 +369,115 @@ li {
   color: #aaa;
   opacity: 0.6;
 }
+
+/* تنسيقات المهام الفرعية (Subtasks) */
+.subtask-list {
+  list-style: none;
+  padding: 0;
+  margin-right: 30px; /* إزاحة لليمين للـ RTL */
+  margin-top: 5px;
+  width: 100%;
+}
+
+.subtask-item {
+  margin-right: 30px !important; /* إزاحة لليمين كأنها Tab */
+  width: calc(100% - 30px) !important;
+}
+
+.subtask-item .task-text {
+  font-size: 16px;
+}
+
+/* أزرار الإضافة للمهام الفرعية */
+.add-subtask-btn {
+  background: none;
+  border: none;
+  color: #2196f3;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.add-subtask-btn:hover {
+  background: rgba(33, 150, 243, 0.1);
+}
+
+/* قسم إدخال مهمة فرعية */
+.subtask-input-container {
+  display: flex;
+  gap: 8px;
+  margin-right: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.subtask-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.subtask-input:focus {
+  border-color: #2196f3;
+}
+
+.save-subtask-btn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* تأثيرات السحب والإفلات (Drag & Drop) */
+li[draggable="true"] {
+  cursor: grab;
+  user-select: none;
+}
+
+li.dragging {
+  opacity: 0.4;
+  border: 2px dashed #999;
+}
+
+li.drag-over-top {
+  border-top: 4px solid #4caf50 !important;
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+li.drag-over-bottom {
+  border-bottom: 4px solid #4caf50 !important;
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+/* زر طي المهام الفرعية */
+.collapse-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.collapse-btn:hover {
+  color: #333;
+}
+
+.collapse-placeholder {
+  display: inline-block;
+  width: 18px;
+}
